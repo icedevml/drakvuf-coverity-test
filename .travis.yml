@@ -58,9 +58,9 @@ jobs:
               - autoconf-archive
               - libxen-dev
       before_install:
-        - sed -i 's/private __detail::__variant::_Variant_base<_Types...>/public __detail::__variant::_Variant_base<_Types...>/' /usr/include/c++/9/variant
         - sudo apt-get update
         - sudo apt-get -q -y install bison flex libjson-c-dev autoconf-archive libxen-dev clang-10
+        - sudo sed -i 's/private __detail::__variant::_Variant_base<_Types...>/public __detail::__variant::_Variant_base<_Types...>/' /usr/include/c++/9/variant
         - git submodule update --init libvmi
         - cd libvmi
         - autoreconf -vif
