@@ -41,7 +41,7 @@ jobs:
       addons:
         coverity_scan:
             project:
-                name: drakvuf-coverity-test
+                name: "icedevml/drakvuf-coverity-test"
                 description: "Build submitted via Travis CI"
             notification_email: ml@icedev.pl
             build_command_prepend: "./autogen.sh; ./configure --enable-debug; make clean"
