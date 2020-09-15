@@ -44,7 +44,7 @@ jobs:
                 name: "icedevml/drakvuf-coverity-test"
                 description: "Build submitted via Travis CI"
             notification_email: ml@icedev.pl
-            build_command_prepend: "cov-configure --comptype clang --compiler /usr/bin/clang++-10; ./autogen.sh; ./configure --enable-debug; make clean"
+            build_command_prepend: "cov-configure --comptype clangcc --compiler /usr/bin/clang-10; ./autogen.sh; ./configure --enable-debug; make clean"
             build_command:   "make"
             branch_pattern: master
         apt:
